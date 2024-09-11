@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    background-image: url(../../assets/camper-van.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 64px;
+    height: calc(100vh - 72px);
+}
+
+.content-wrapper {
+
+}
+
+p {
+    font-size: 24px;
+    line-height: 1.333;
+    font-weight: 600;
+    color: var(--color-inputs);
+    margin-bottom: 40px;
+}
+
+@media (min-device-pixel-ratio: 2) and (min-resolution: 2dppx) {
+    .container {
+        background-image: url(../../assets/camper-van@2x.jpg);
+    }
+}
