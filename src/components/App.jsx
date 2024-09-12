@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
@@ -17,8 +16,6 @@ const Reviews = lazy(() => import('./Reviews/Reviews.jsx'));
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
       <div className="appContainer">
           <header>

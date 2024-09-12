@@ -1,15 +1,15 @@
-import Rewiew from "./Rewiew.js";
+import Truck from "./Truck.jsx";
 
-const Reviews = () => {
+const TruckList = () => {
     return (
         <div>
             <ul>
                 <li>
-                    <Rewiew />
+                    <Truck />
                 </li>
             </ul>
         </div>
     )
 }
 
-export default Reviews;
+export default TruckList;
