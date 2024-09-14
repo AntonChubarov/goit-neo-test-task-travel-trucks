@@ -12,7 +12,7 @@ export const selectFilters = (state) => state.filters;
 export const selectFilterByKey = (key) =>
     createSelector([selectFilters], (filters) => filters[key]);
 
-export const selectFavorites = (state) => state.favorites;
+export const selectFavorites = (state) => state.favorites.favorites;
 
 export const selectIsFavorite = (id) =>
     createSelector([selectFavorites], (favorites) => favorites.includes(id));

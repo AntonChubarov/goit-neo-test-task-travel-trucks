@@ -1,0 +1,85 @@
+.truckContainer {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.thumbnail {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.truckDetails {
+    flex: 1;
+    position: relative;
+}
+
+.favoriteButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.favoriteButton:hover {
+    background: none;
+}
+
+.favoriteIcon {
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s;
+}
+
+.favoriteIcon.favorite {
+    fill: #ff0000; /* Red color for the filled favorite state */
+}
+
+.favoriteButton:hover .favoriteIcon {
+    fill: #ff6666;
+}
+
+.truckName {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.truckPrice {
+    font-size: 20px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.truckDescription {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.featuresContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.showMoreButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.showMoreButton:hover {
+    background-color: #0056b3;
+}

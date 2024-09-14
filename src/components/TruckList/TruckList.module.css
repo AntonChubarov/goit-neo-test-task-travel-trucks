@@ -1,0 +1,28 @@
+.truckListContainer {
+    padding: 20px;
+}
+
+.truckList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.truckListItem {
+    margin-bottom: 20px;
+}
+
+.loadMoreButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.loadMoreButton:hover {
+    background-color: #0056b3;
+}

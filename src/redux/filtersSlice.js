@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     type: '',
-    transmission: '',
+    autoTransmission: false,
     // TODO update
 };
 

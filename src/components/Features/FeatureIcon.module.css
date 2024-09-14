@@ -1,0 +1,18 @@
+.featureIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: #333;
+}
+
+.featureName {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}

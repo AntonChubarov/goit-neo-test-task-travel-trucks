@@ -1,0 +1,20 @@
+.ratingInfo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.starIcon {
+    width: 16px;
+    height: 16px;
+    fill: #ffcc00;
+}
+
+.ratingValue {
+    font-weight: bold;
+}
+
+.reviewsCount {
+    color: #666;
+}
