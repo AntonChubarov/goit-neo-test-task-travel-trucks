@@ -12,7 +12,7 @@ const HomePage = () => {
         <div className={styles.container}>
             <div className={styles.contentWrapper}>
                 <h1>Campers of your dreams</h1>
-                <p>You can find everything you want in our catalog</p>
+                <p className={styles.slogan}>You can find everything you want in our catalog</p>
                 <button onClick={handleViewNowClick}>View Now</button>
             </div>
         </div>

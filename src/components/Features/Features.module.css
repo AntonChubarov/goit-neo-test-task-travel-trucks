@@ -1,0 +1,58 @@
+.featuresTabContainer {
+    display: flex;
+    gap: 40px;
+}
+
+.features {
+    flex: 1;
+    background-color: var(--color-inputs);
+    border-radius: 10px;
+    padding: 44px 52px;
+}
+
+.featureList {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 100px;
+}
+
+.vehicleDetailsContainer {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.vehicleDetailsHeader {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.separatorLine {
+    width: 100%;
+    height: 2px;
+    background-color: grey;
+    margin-bottom: 20px;
+}
+
+.vehicleDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detailsRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.detailLabel {
+    font-weight: 500;
+}
+
+.detailValue {
+    text-align: right;
+}

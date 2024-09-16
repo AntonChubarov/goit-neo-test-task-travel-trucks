@@ -1,11 +1,11 @@
-import React from 'react';
 import styles from './Location.module.css';
+import iconsSpritePath from '../../assets/icons.svg';
 
 const Location = ({ location }) => {
     return (
         <div className={styles.location}>
             <svg className={styles.locationIcon}>
-                <use href="#location-icon" />
+                <use href={`${iconsSpritePath}#icon-map`} />
             </svg>
             <span className={styles.locationText}>{location}</span>
         </div>

@@ -1,5 +1,5 @@
-import React from 'react';
 import styles from './Review.module.css';
+import iconsSpritePath from '../../assets/icons.svg';
 
 const Review = ({ review }) => {
     return (
@@ -8,15 +8,14 @@ const Review = ({ review }) => {
                 {review.reviewer_name.charAt(0).toUpperCase()}
             </div>
             <div className={styles.reviewContent}>
-                <h4 className={styles.userName}>{review.reviewer_name}</h4>
+                <p className={styles.userName}>{review.reviewer_name}</p>
                 <div className={styles.stars}>
                     {Array.from({ length: 5 }, (_, index) => (
                         <svg
                             key={index}
-                            className={styles.star}
-                            fill={index < review.reviewer_rating ? 'yellow' : 'gray'}
+                            className={index < review.reviewer_rating ? styles.starActive : styles.starPassive}
                         >
-                            <use href="#star-icon" />
+                            <use href={`${iconsSpritePath}#icon-star`} />
                         </svg>
                     ))}
                 </div>

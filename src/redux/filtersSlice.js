@@ -3,7 +3,10 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     type: '',
     autoTransmission: false,
-    // TODO update
+    kitchen: false,
+    AC: false,
+    TV: false,
+    bathroom: false,
 };
 
 const filtersSlice = createSlice({

@@ -1,61 +1,46 @@
 .bookingForm {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+    flex: 1;
+    border-radius: 10px;
+    padding: 44px 57px;
+    border: 1px solid var(--color-gray-light);
 }
 
 h2 {
-    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 8px;
 }
 
-p {
-    margin-bottom: 20px;
+.bookingFormSlogan {
+    margin-bottom: 24px;
 }
 
 .formGroup {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--color-text);
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid var(--color-gray-light);
+    border-radius: 8px;
     box-sizing: border-box;
-}
-
-textarea {
-    resize: vertical;
+    background: var(--color-inputs);
 }
 
 .errorInput {
-    border-color: red;
+    border-color: var(--color-button);
 }
 
 .errorText {
-    color: red;
     font-size: 12px;
-}
-
-.submitButton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.submitButton:hover {
-    background-color: #0056b3;
+    color: var(--color-button);
 }

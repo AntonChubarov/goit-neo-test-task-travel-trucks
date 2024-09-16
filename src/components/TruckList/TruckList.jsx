@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Truck from './Truck';
 import styles from './TruckList.module.css';
@@ -23,7 +23,6 @@ const TruckList = () => {
                 dispatch(setVehicles(data.items));
                 setTotalLoaded(data.items.length);
                 setPage(1);
-                // Check if there are more items to load
                 if (data.items.length >= data.total || data.items.length < limit) {
                     setHasMore(false);
                 }
@@ -45,7 +44,6 @@ const TruckList = () => {
             setPage(nextPage);
             const updatedTotalLoaded = totalLoaded + data.items.length;
             setTotalLoaded(updatedTotalLoaded);
-            // Check if there are more items to load
             if (updatedTotalLoaded >= data.total || data.items.length < limit) {
                 setHasMore(false);
             }

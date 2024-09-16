@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './BookingForm.module.css';
 
 const BookingForm = () => {
@@ -28,8 +28,6 @@ const BookingForm = () => {
         e.preventDefault();
         const validationErrors = validateForm();
         if (Object.keys(validationErrors).length === 0) {
-            console.log('Form data submitted:', formData);
-            // Implement form submission logic here (e.g., send data to server)
             setFormData({ name: '', email: '', bookingDate: '', comment: '' });
         } else {
             setErrors(validationErrors);
@@ -39,7 +37,7 @@ const BookingForm = () => {
     return (
         <div className={styles.bookingForm}>
             <h2>Book your camper now</h2>
-            <p>Stay connected! We are always ready to help you.</p>
+            <p className={styles.bookingFormSlogan}>Stay connected! We are always ready to help you.</p>
             <form onSubmit={handleSubmit}>
                 <div className={styles.formGroup}>
                     <label htmlFor="name">Name:</label>

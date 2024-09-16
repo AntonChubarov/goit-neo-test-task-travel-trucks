@@ -8,7 +8,7 @@
 .locationIcon {
     width: 16px;
     height: 16px;
-    fill: #007bff;
+    fill: var(--color-main);
 }
 
 .locationText {

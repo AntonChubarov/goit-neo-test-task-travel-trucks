@@ -8,7 +8,7 @@
 .starIcon {
     width: 16px;
     height: 16px;
-    fill: #ffcc00;
+    fill: var(--color-rating);
 }
 
 .ratingValue {

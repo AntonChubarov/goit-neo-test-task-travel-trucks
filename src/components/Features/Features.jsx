@@ -1,4 +1,3 @@
-import React from 'react';
 import FeatureIcon from './FeatureIcon';
 import { useTruck } from '../TruckInfo/TruckContext.jsx';
 import styles from './Features.module.css';
@@ -6,7 +5,6 @@ import BookingForm from "../BookingForm/BookingForm.jsx";
 
 const Features = () => {
     const truck = useTruck();
-    console.log(`Features opened, truck: ${JSON.stringify(truck)}`);
 
     if (!truck) {
         return <p>No truck data available.</p>;
@@ -17,21 +15,45 @@ const Features = () => {
     );
 
     return (
-        <div className={styles.features}>
-            <ul className={styles.featureList}>
-                {features.map((feature) => (
-                    <li key={feature} className={styles.featureItem}>
-                        <FeatureIcon feature={feature} />
-                    </li>
-                ))}
-            </ul>
-            <div className={styles.vehicleDetails}>
-                <p>Form: {truck.form}</p>
-                <p>Length: {truck.length}</p>
-                <p>Width: {truck.width}</p>
-                <p>Height: {truck.height}</p>
-                <p>Tank: {truck.tank}</p>
-                <p>Consumption: {truck.consumption}</p>
+        <div className={styles.featuresTabContainer}>
+            <div className={styles.features}>
+                <ul className={styles.featureList}>
+                    {features.map((feature) => (
+                        <li key={feature} className={styles.featureItem}>
+                            <FeatureIcon feature={feature}/>
+                        </li>
+                    ))}
+                </ul>
+                <div className={styles.vehicleDetailsContainer}>
+                    <p className={styles.vehicleDetailsHeader}>Vehicle details</p>
+                    <div className={styles.separatorLine}></div>
+                    <div className={styles.vehicleDetails}>
+                        <div className={styles.detailsRow}>
+                            <span className={styles.detailLabel}>Form:</span>
+                            <span className={styles.detailValue}>{truck.form}</span>
+                        </div>
+                        <div className={styles.detailsRow}>
+                            <span className={styles.detailLabel}>Length:</span>
+                            <span className={styles.detailValue}>{truck.length}</span>
+                        </div>
+                        <div className={styles.detailsRow}>
+                            <span className={styles.detailLabel}>Width:</span>
+                            <span className={styles.detailValue}>{truck.width}</span>
+                        </div>
+                        <div className={styles.detailsRow}>
+                            <span className={styles.detailLabel}>Height:</span>
+                            <span className={styles.detailValue}>{truck.height}</span>
+                        </div>
+                        <div className={styles.detailsRow}>
+                            <span className={styles.detailLabel}>Tank:</span>
+                            <span className={styles.detailValue}>{truck.tank}</span>
+                        </div>
+                        <div className={styles.detailsRow}>
+                            <span className={styles.detailLabel}>Consumption:</span>
+                            <span className={styles.detailValue}>{truck.consumption}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <BookingForm/>
         </div>

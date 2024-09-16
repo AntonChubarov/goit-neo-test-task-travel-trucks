@@ -36,17 +36,24 @@ const Truck = ({ truck }) => {
                 className={styles.thumbnail}
             />
             <div className={styles.truckDetails}>
-                <button className={styles.favoriteButton} onClick={handleFavoriteClick}>
-                    <svg
-                        className={`${styles.favoriteIcon} ${isFavorite ? styles.favorite : ''}`}
-                    >
-                        <use href={`${iconsSpritePath}#icon-heart`} />
-                    </svg>
-                </button>
-                <h2 className={styles.truckName}>{truck.name}</h2>
-                <p className={styles.truckPrice}>${truck.price}</p>
-                <RatingInfo rating={truck.rating} reviews={truck.reviews} />
-                <Location location={truck.location} />
+
+                <div className={styles.truckHeading}>
+                    <p className={styles.truckName}>{truck.name}</p>
+                    <p className={styles.truckPrice}>${truck.price}</p>
+                    <button className={styles.favoriteButton} onClick={handleFavoriteClick}>
+                        <svg
+                            className={`${styles.favoriteIcon} ${isFavorite ? styles.favorite : ''}`}
+                        >
+                            <use href={`${iconsSpritePath}#icon-heart`}/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div className={styles.truckData}>
+                    <RatingInfo rating={truck.rating} reviews={truck.reviews}/>
+                    <Location location={truck.location}/>
+                </div>
+
                 <p className={styles.truckDescription}>{truck.description}</p>
                 <div className={styles.featuresContainer}>
                     {features.map((feature) => (
